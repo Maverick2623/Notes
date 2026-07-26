@@ -10,7 +10,7 @@ APIs
 - lpBuffer should be char array of size[unlen+1]
 - for 'unlen' we need to include Lmcons.h
 - nSize can be set using sizeOf(lpBuffer)
-- Reference : https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getcomputernamea#syntax
+- Reference : https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getusernamea#syntax
 
 
 ### GetComputerNameA
@@ -21,5 +21,10 @@ APIs
 
 
 ### LookupAccountNameA
+- Accepts System Name and account name as input and retrieves the SID 
+- in C we need to add a Struct for PSID_NAME_USE, CPP handles it automatically
+- SID is of type byte array of size SECURITY_MAX_SID_SIZE  
+
+
 
 **Note:** This is form my reference, pull requests (if any) may or may not be accepted
