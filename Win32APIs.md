@@ -6,8 +6,19 @@ This would help me track the pitfalls and issues i ran into, This would act as a
 APIs
 -----
 ### GetUserNameA
+- Gets User Name in lpBuffer of Size nSize 
+- lpBuffer should be char array of size[unlen+1]
+- for 'unlen' we need to include Lmcons.h
+- nSize can be set using sizeOf(lpBuffer)
+- Reference : https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getcomputernamea#syntax
 
-## GetComputerNameA
+
+### GetComputerNameA
+- Gets Computer Name in lpBuffer of Size nSize 
+- lpBuffer should be char array of size[256]
+- nSize can be set using sizeOf(lpBuffer)
+- Reference : https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getcomputernamea#syntax
+
 
 ### LookupAccountNameA
 
