@@ -7,6 +7,8 @@ APIs
 -----
 ### GetUserNameA
 
+## GetComputerNameA
+
 ### LookupAccountNameA
 
 **Note:** This is form my reference, pull requests (if any) may or may not be accepted
