@@ -49,5 +49,6 @@ cl.exe main.c /WX /W4 /Zi /EHsc abc.cpp /link user32.lib
 
 ### C/C++ Runtime Library (CRT)
 `/MT` -> Multi Threaded Static  (copies code into our code) | Larger in size 
+
 `/MD`-> Multi Threaded DLL (references external DLLs) | Smaller in Size 
 
