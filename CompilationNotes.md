@@ -54,3 +54,14 @@ cl.exe main.c /WX /W4 /Zi /EHsc abc.cpp /link user32.lib
 
 **Note:** With the `/Zi`the sizes of default compilation and compilation with `/MT` flag has the samilar size, since `/Zi` include all the debugging data, it futher defaults to `/MTd`
 
+
+
+
+
+
+
+
+
+
+
+**Note:** This is form my reference, pull requests (if any) may or may not be accepted
