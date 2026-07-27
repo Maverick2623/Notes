@@ -29,4 +29,28 @@ APIs
 - Takes the SID enum as an input an stores String SID in the output 
 - Reference: https://learn.microsoft.com/en-us/windows/win32/api/sddl/nf-sddl-convertsidtostringsida
 
+### WriteFile
+- Writes data to a file 
+- Reference: https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **Note:** This is form my reference, pull requests (if any) may or may not be accepted
