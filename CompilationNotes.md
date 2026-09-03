@@ -55,7 +55,20 @@ cl.exe main.c /WX /W4 /Zi /EHsc abc.cpp /link user32.lib
 **Note:** With the `/Zi`the sizes of default compilation and compilation with `/MT` flag has the samilar size, since `/Zi` include all the debugging data, it futher defaults to `/MTd`
 
 
+Hexadecimal format specifiers for sscan_f 
+```
+if (sscanf_s(argv[2], "%hhx", &key) != 1) {
+        printf("Error: Argument '%s' is not a valid hex byte.\n", argv[2]);
+        return 1;
+    }
+```
 
+| Variable Type | Bit Width | Format Specifier | Example Input |
+| :--- | :--- | :--- | :--- |
+| `unsigned char` | 8-bit (1 byte) | `%hhx` | `A4` |
+| `unsigned short` | 16-bit (2 bytes) | `%hx` | `D3F1` |
+| `unsigned int` | 32-bit (4 bytes) | `%x` | `A1B2C3D4` |
+| `unsigned long long` | 64-bit (8 bytes) | `%llx` | `1A2B3C4D5E6F7G8H` |
 
 
 
