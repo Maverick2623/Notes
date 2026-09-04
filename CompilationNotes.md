@@ -70,11 +70,19 @@ if (sscanf_s(argv[2], "%hhx", &key) != 1) {
 | `unsigned int` | 32-bit (4 bytes) | `%x` | `A1B2C3D4` |
 | `unsigned long long` | 64-bit (8 bytes) | `%llx` | `1A2B3C4D5E6F7G8H` |
 
+```
+DWORD flags = (DWORD)stroul(argv[1],NULL,16);
+```
+This function parses a string and converts it into an unsigned long integer.
+- argv[1]: This is the first command-line argument passed to your program. It expects a string like "0x1A" or "F0".
+- NULL: This parameter is optionally used to find where the valid number ends in the string. Passing NULL means you don't care to track where the parsing stopped.
+- 16: This explicitly tells the function to parse the string as Base-16 (Hexadecimal).
 
+`(DWORD)`
+This is a typecast.In Windows development, a DWORD (Double Word) is a defined data type representing a 32-bit unsigned integer.Since strtoul returns an unsigned long (which can be 64-bit on some systems), (DWORD) explicitly forces/casts that value down into a standard Windows 32-bit integer format.
 
-
-
-
+`DWORD flags = ...`
+This creates a new 32-bit unsigned integer variable named flags and assigns the converted hexadecimal value to it. In low-level programming, "flags" usually represent individual bits that turn specific features, permissions, or options on or off (e.g., 0x00000001 might mean "Read-Only", 0x00000002 might mean "Hidden").
 
 
 **Note:** This is form my reference, pull requests (if any) may or may not be accepted
